@@ -1,5 +1,7 @@
 package com.example.FirstSpring.ServiceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class StudentServiceImplementation implements StudentService {
 	public void saveStudent(StudentDetails studentDetails) {
 		studentRepository.save(studentDetails);
 		
+	}
+	@Override
+	public List<StudentDetails> getAllStudents() {
+		
+		return studentRepository.findAll();
 	}
 	
 	
