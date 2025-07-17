@@ -8,4 +8,5 @@ public interface StudentService {
 	
 	void saveStudent(StudentDetails studentDetails);
 	List<StudentDetails> getAllStudents();
+	void deleteStudent(Integer id);
 }

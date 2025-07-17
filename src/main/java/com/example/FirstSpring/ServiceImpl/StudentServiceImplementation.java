@@ -24,6 +24,11 @@ public class StudentServiceImplementation implements StudentService {
 		
 		return studentRepository.findAll();
 	}
+	@Override
+	public void deleteStudent(Integer id) {
+		studentRepository.deleteById(id);
+		
+	}
 	
 	
 
