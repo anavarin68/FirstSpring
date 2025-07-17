@@ -37,6 +37,10 @@ public class StudentController {
 	public String deleteStudent(@PathVariable("id") Integer id) {
 		studentService.deleteStudent(id);
 		return "Data Deleted Successfully";
-		
+	}
+	
+	@GetMapping("/get/{id}")
+	public StudentDetails getStudentbyId(@PathVariable("id") Integer id) {
+		return studentService.getStudentbyId(id);
 	}
 }

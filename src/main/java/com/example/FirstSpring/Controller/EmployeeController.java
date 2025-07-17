@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.FirstSpring.Model.EmployeeDetails;
 import com.example.FirstSpring.Service.EmployeeService;
 
-
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -38,7 +37,11 @@ public class EmployeeController {
 		employeeService.deleteEmployee(id);
 		return "Data Deleted Successfully";
 	}
+	
+	@GetMapping("/get/{id}")
+	public EmployeeDetails getEmployeebyId(@PathVariable("id") Integer id) {
+		return employeeService.getEmployeebyId(id);
 		
+	}
 		
-
 }

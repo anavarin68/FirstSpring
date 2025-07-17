@@ -44,7 +44,4 @@ public class EmployeeDetails {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
-
 }

@@ -14,20 +14,25 @@ public class StudentServiceImplementation implements StudentService {
 	
 	@Autowired
 	StudentRepository studentRepository;
+	
 	@Override
 	public void saveStudent(StudentDetails studentDetails) {
 		studentRepository.save(studentDetails);
-		
 	}
+	
 	@Override
 	public List<StudentDetails> getAllStudents() {
-		
 		return studentRepository.findAll();
 	}
+	
 	@Override
 	public void deleteStudent(Integer id) {
-		studentRepository.deleteById(id);
-		
+		studentRepository.deleteById(id);	
+	}
+
+	@Override
+	public StudentDetails getStudentbyId(Integer id) {
+		return studentRepository.findById(id).get();
 	}
 	
 	

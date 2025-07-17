@@ -47,13 +47,4 @@ public class StudentDetails {
 	public String toString() {
 		return "StudentDetails [sid=" + sid + ", sname=" + sname + ", scity=" + scity + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
