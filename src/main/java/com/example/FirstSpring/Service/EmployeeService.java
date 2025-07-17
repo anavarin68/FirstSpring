@@ -1,0 +1,11 @@
+package com.example.FirstSpring.Service;
+
+import java.util.List;
+
+import com.example.FirstSpring.Model.EmployeeDetails;
+
+public interface EmployeeService {
+
+	void saveEmployee(EmployeeDetails employeeDetails);
+	List<EmployeeDetails> getallEmployee();
+}
